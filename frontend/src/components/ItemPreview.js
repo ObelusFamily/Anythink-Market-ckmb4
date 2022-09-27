@@ -20,6 +20,7 @@ const mapDispatchToProps = (dispatch) => ({
 
 const ItemPreview = (props) => {
   const item = props.item;
+  const imgscr = item.image;
 
   const handleClick = (ev) => {
     ev.preventDefault();
@@ -37,7 +38,7 @@ const ItemPreview = (props) => {
     >
       <img
         alt="item"
-        src={item.image}
+        src={imgscr}
         onError={(e) => {
           e.target.onerror = null;
           e.target.src = placeholder;
